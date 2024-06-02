@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Welcome to the POS System.</p>
+    <p>
+        <a href="@Url.Action("Index", "Cash")" class="btn btn-primary">Cash View</a>
+        <a href="@Url.Action("Index", "Product")" class="btn btn-primary">Product View</a>
+    </p>
+</div>
