@@ -1,0 +1,31 @@
+﻿@model NogaShoesPOS.Models.Cash
+
+@{
+    ViewData["Title"] = "Delete Cash";
+}
+
+<h2>Delete Cash</h2>
+
+<h4>Cash</h4>
+<hr />
+<div>
+    <h4>Are you sure you want to delete this?</h4>
+    <div>
+        <h5>@Model.Date</h5>
+        <h5>@Model.Amount</h5>
+        <h5>@Model.Description</h5>
+    </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
