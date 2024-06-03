@@ -11,6 +11,24 @@
 <div class="row">
     <div class="col-md-12">
         <form asp-action="Edit">
+
+            <div class="form-group">
+                <label asp-for="CashSerial" class="control-label"></label>
+                <input asp-for="CashSerial" class="form-control" />
+                <span asp-validation-for="CashSerial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cashier" class="control-label"></label>
+                <input asp-for="Cashier" class="form-control" />
+                <span asp-validation-for="Cashier" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
                 <input asp-for="Date" class="form-control" />
@@ -26,6 +44,8 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-secondary">Back to List</a>
