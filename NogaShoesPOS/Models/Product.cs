@@ -8,7 +8,14 @@ namespace NogaShoesPOS.Models
 
         [Required]
         [StringLength(100)]
+        public string ProductCode { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; }
+
+        [Required]
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [Required]
         [Range(0, 999999.99)]

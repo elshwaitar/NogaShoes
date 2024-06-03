@@ -27,7 +27,7 @@ namespace POSSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Date,Amount,Description")] Cash cash)
+        public async Task<IActionResult> Create([Bind("Id,CustomerName,Cashier,Date,Amount,Description")] Cash cash)
             {
             if (ModelState.IsValid)
                 {
@@ -55,7 +55,7 @@ namespace POSSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,Amount,Description")] Cash cash)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,Amount,CustomerName,Cashier,Description")] Cash cash)
             {
             if (id != cash.Id)
                 {
